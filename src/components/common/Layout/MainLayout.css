@@ -1,0 +1,23 @@
+/**
+ * Estilos para el layout principal
+ * 
+ * Define la estructura base de la aplicación
+ */
+
+.main-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding-top: 80px; /* Compensar el header fijo */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 70px;
+  }
+}

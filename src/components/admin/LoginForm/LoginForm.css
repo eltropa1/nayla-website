@@ -1,0 +1,179 @@
+/**
+ * Estilos para el componente LoginForm
+ */
+
+.login-form-container {
+  width: 100%;
+  max-width: 440px;
+}
+
+.login-form-card {
+  background: var(--color-white);
+  padding: var(--spacing-2xl);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--color-border);
+}
+
+/* Header */
+.login-form-header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.login-form-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.login-form-logo__icon {
+  font-size: var(--font-size-3xl);
+}
+
+.login-form-logo__title {
+  font-size: var(--font-size-2xl);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.login-form-subtitle {
+  color: var(--color-text-secondary);
+  margin: 0;
+  font-size: var(--font-size-base);
+}
+
+/* Formulario */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.login-form-error {
+  background: var(--color-error);
+  color: var(--color-white);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  text-align: center;
+  font-weight: var(--font-weight-medium);
+}
+
+/* Campos del formulario */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.form-label {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+}
+
+.form-input {
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  background: var(--color-white);
+  font-size: var(--font-size-base);
+  transition: all var(--transition-fast);
+  width: 100%;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-primary-light);
+}
+
+.form-input:disabled {
+  background: var(--color-gray-100);
+  color: var(--color-text-secondary);
+  cursor: not-allowed;
+}
+
+/* Botón de envío */
+.login-form-submit {
+  width: 100%;
+  margin-top: var(--spacing-md);
+}
+
+.login-form-submit--loading {
+  position: relative;
+  color: transparent;
+}
+
+/* Información adicional */
+.login-form-info {
+  margin-top: var(--spacing-2xl);
+  padding-top: var(--spacing-xl);
+  border-top: 1px solid var(--color-border);
+}
+
+.login-form-note__title {
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-md);
+  font-weight: var(--font-weight-semibold);
+}
+
+.login-form-note__list {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  margin: 0;
+  padding-left: var(--spacing-lg);
+}
+
+.login-form-note__list li {
+  margin-bottom: var(--spacing-xs);
+}
+
+.login-form-note__list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Footer */
+.login-form-footer {
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.login-form-footer__text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .login-form-card {
+    padding: var(--spacing-xl);
+  }
+  
+  .login-form-logo {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+  .login-form-logo__title {
+    font-size: var(--font-size-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .login-form-card {
+    padding: var(--spacing-lg);
+  }
+  
+  .login-form-info {
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-lg);
+  }
+}

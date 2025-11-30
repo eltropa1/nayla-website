@@ -1,0 +1,180 @@
+/**
+ * Estilos para el componente WorkCard
+ * 
+ * Diseño moderno con efectos hover y información completa
+ */
+
+.work-card {
+  background: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  position: relative;
+}
+
+.work-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Contenedor de imagen */
+.work-card__image-container {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+
+.work-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.work-card__image--loading {
+  opacity: 0;
+}
+
+.work-card__image--loaded {
+  opacity: 1;
+}
+
+.work-card:hover .work-card__image {
+  transform: scale(1.05);
+}
+
+/* Overlay */
+.work-card__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.work-card:hover .work-card__overlay {
+  opacity: 1;
+}
+
+.work-card__overlay-content {
+  text-align: center;
+  color: var(--color-white);
+}
+
+.work-card__view-details {
+  display: block;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-sm);
+}
+
+.work-card__video-indicator {
+  font-size: var(--font-size-sm);
+  opacity: 0.9;
+}
+
+/* Badges */
+.work-card__badge {
+  position: absolute;
+  top: var(--spacing-md);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-white);
+}
+
+.work-card__badge--featured {
+  left: var(--spacing-md);
+  background: var(--color-accent);
+}
+
+.work-card__badge--year {
+  right: var(--spacing-md);
+  background: var(--color-primary);
+}
+
+/* Contenido */
+.work-card__content {
+  padding: var(--spacing-lg);
+}
+
+.work-card__header {
+  margin-bottom: var(--spacing-md);
+}
+
+.work-card__title {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.3;
+}
+
+.work-card__role {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+.work-card__description {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  margin-bottom: var(--spacing-md);
+}
+
+.work-card__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.work-card__category {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: var(--font-weight-medium);
+}
+
+/* Estados de accesibilidad */
+.work-card:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .work-card__content {
+    padding: var(--spacing-md);
+  }
+  
+  .work-card__title {
+    font-size: var(--font-size-base);
+  }
+  
+  .work-card__badge {
+    top: var(--spacing-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: var(--font-size-xs);
+  }
+  
+  .work-card__badge--featured {
+    left: var(--spacing-sm);
+  }
+  
+  .work-card__badge--year {
+    right: var(--spacing-sm);
+  }
+}

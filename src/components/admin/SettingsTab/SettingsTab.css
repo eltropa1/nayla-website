@@ -1,0 +1,20 @@
+.settings-tab {
+  padding: var(--spacing-2xl);
+}
+
+.settings-tab__header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.coming-soon {
+  text-align: center;
+  padding: var(--spacing-3xl);
+  background: var(--color-background-alt);
+  border-radius: var(--border-radius-lg);
+}
+
+.coming-soon__icon {
+  font-size: var(--font-size-4xl);
+  margin-bottom: var(--spacing-lg);
+}
