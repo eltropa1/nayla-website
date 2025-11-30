@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import { AppProvider } from './context/AppContext'
 import MainLayout from './components/common/Layout/MainLayout'
 import ErrorBoundary from './components/common/ErrorBoundary/ErrorBoundary'
@@ -7,7 +7,7 @@ import ErrorBoundary from './components/common/ErrorBoundary/ErrorBoundary'
 function App() {
   return (
     <ErrorBoundary>
-      <Router>
+      <Router> {/* Esto ahora es HashRouter */}
         <AppProvider>
           <MainLayout />
         </AppProvider>
