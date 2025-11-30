@@ -6,6 +6,11 @@ export default defineConfig({
   base: '/nayla-website/',
   build: {
     outDir: 'dist',
-    assetsDir: 'assets'
+    assetsDir: 'assets',
+    rollupOptions: {
+      input: {
+        main: './index.html' // ← Especifica explícitamente el entry point
+      }
+    }
   }
 })
