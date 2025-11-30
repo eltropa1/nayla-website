@@ -8,7 +8,7 @@ import react from '@vitejs/plugin-react'
  */
 export default defineConfig({
   plugins: [react()],
-  base: '/nayla-website/', // ¡IMPORTANTE! Esto debe coincidir con el nombre del repositorio
+  base: './', // ¡IMPORTANTE! Esto debe coincidir con el nombre del repositorio
   server: {
     port: 3000,
     open: true // Abre el navegador automáticamente
